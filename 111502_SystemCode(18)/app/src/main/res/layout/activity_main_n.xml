@@ -7,6 +7,32 @@
     tools:context=".MainActivityN">
 
     <EditText
+        android:id="@+id/editTextPasswordN1"
+        android:layout_width="276dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="密碼"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Button
+        android:id="@+id/buttonRegisterN"
+        android:layout_width="276dp"
+        android:layout_height="50dp"
+        android:text="註冊"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <EditText
         android:id="@+id/editTextPasswordN2"
         android:layout_width="276dp"
         android:layout_height="48dp"
@@ -18,7 +44,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
+        app:layout_constraintVertical_bias="0.657" />
 
     <EditText
         android:id="@+id/editTextAccountN"
@@ -32,7 +58,21 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.468" />
+
+    <EditText
+        android:id="@+id/editTextUserNameN"
+        android:layout_width="276dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="使用者名稱"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -44,32 +84,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@drawable/ic_baseline_pets_24" />
-
-    <Button
-        android:id="@+id/buttonRegisterN"
-        android:layout_width="276dp"
-        android:layout_height="50dp"
-        android:text="註冊"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-    <EditText
-        android:id="@+id/editTextPasswordN1"
-        android:layout_width="276dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="密碼"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
 
     <ImageButton
         android:id="@+id/imageButtonBackN"

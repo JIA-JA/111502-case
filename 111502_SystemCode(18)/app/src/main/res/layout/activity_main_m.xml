@@ -86,6 +86,7 @@
         android:id="@+id/textViewCreateAccountM"
         android:layout_width="92dp"
         android:layout_height="24dp"
+        android:onClick="MNonClick"
         android:text="建立新帳號"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -33,5 +33,10 @@ public class MainActivityO extends AppCompatActivity {
         intent.setClass(MainActivityO.this, MainActivityJ.class);
         startActivity(intent);
     }
+    public void OMonClick(View v) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivityO.this, MainActivityM.class);
+        startActivity(intent);
+    }
 
 }
