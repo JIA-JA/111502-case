@@ -17,51 +17,11 @@
         app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@drawable/ic_baseline_pets_24" />
 
-    <TextView
-        android:id="@+id/textViewForgetPasswordM"
-        android:layout_width="74dp"
-        android:layout_height="24dp"
-        android:text="忘記密碼"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
-
-    <EditText
-        android:id="@+id/editTextPasswordM"
-        android:layout_width="276dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="密碼"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
-
-    <EditText
-        android:id="@+id/editTextAccountM"
-        android:layout_width="276dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="請輸入帳號"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
-
     <ImageButton
         android:id="@+id/imageButtonBackM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="backonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
@@ -82,29 +42,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.679" />
 
-    <TextView
-        android:id="@+id/textViewCreateAccountM"
-        android:layout_width="92dp"
-        android:layout_height="24dp"
-        android:onClick="MNonClick"
-        android:text="建立新帳號"
-        android:textSize="18sp"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/button_SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkBoxRememberM"
-        android:layout_width="80dp"
-        android:layout_height="28dp"
-        android:text="記住我"
+    <TextView
+        android:id="@+id/textView_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未登入"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
+        app:layout_constraintTop_toBottomOf="@+id/button_SignIn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

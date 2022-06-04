@@ -31,79 +31,81 @@ public class MainActivityN extends AppCompatActivity {
         password2 = findViewById(R.id.editTextPasswordN2);
 
     }
-        public void register(View view){
-
-            String cusername = username.getText().toString();
-            String caccount = account.getText().toString();
-            String cpassword1 = password1.getText().toString();
-            String cpassword2 = password2.getText().toString();
-
-//            if(caccount.length() < 2 || cusername.length() < 2 || cpassword1.length() < 2 || cpassword2.length() < 2 ){
+    public void backonClick(View v) {
+        MainActivityN.this.finish();
+    }
+//        public void register(View view){
+//
+//            String cusername = username.getText().toString();
+//            String caccount = account.getText().toString();
+//            String cpassword1 = password1.getText().toString();
+//            String cpassword2 = password2.getText().toString();
+//
+////            if(caccount.length() < 2 || cusername.length() < 2 || cpassword1.length() < 2 || cpassword2.length() < 2 ){
+////                Toast.makeText(getApplicationContext(),"輸入資訊不符合要求請重新輸入",Toast.LENGTH_LONG).show();
+////                return;
+////            }
+//
+//            if(cpassword1 != cpassword2){
 //                Toast.makeText(getApplicationContext(),"輸入資訊不符合要求請重新輸入",Toast.LENGTH_LONG).show();
 //                return;
 //            }
-
-            if(cpassword1 != cpassword2){
-                Toast.makeText(getApplicationContext(),"輸入資訊不符合要求請重新輸入",Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            User user = new User();
-
-            user.setUsername(cusername);
-            user.setPassword(cpassword1);
-
-            new Thread(){
-                @Override
-                public void run() {
-
-                    int msg = 0;
-
-                    UserDao userDao = new UserDao();
-
-                    User uu = userDao.findUser(user.getUsername());
-
-                    if(uu != null){
-                        msg = 1;
-                    }
-
-                    boolean flag = userDao.register(user);
-                    if(flag){
-                        msg = 2;
-                    }
-                    hand.sendEmptyMessage(msg);
-
-                }
-            }.start();
-
-
-        }
-        final Handler hand = new Handler()
-        {
-            @Override
-            public void handleMessage(Message msg) {
-                if(msg.what == 0)
-                {
-                    Toast.makeText(getApplicationContext(),"註冊失敗",Toast.LENGTH_LONG).show();
-
-                }
-                if(msg.what == 1)
-                {
-                    Toast.makeText(getApplicationContext(),"該賬號已經存在，請換一個賬號",Toast.LENGTH_LONG).show();
-
-                }
-                if(msg.what == 2)
-                {
-                    //startActivity(new Intent(getApplication(),MainActivity.class));
-
-                    Intent intent = new Intent();
-                    //將想要傳遞的資料用putExtra封裝在intent中
-                    intent.putExtra("a","註冊");
-                    setResult(RESULT_CANCELED,intent);
-                    finish();
-                }
-
-            }
-        };
-    }
+//
+//            User user = new User();
+//
+//            user.setUsername(cusername);
+//            user.setPassword(cpassword1);
+//
+//            new Thread(){
+//                @Override
+//                public void run() {
+//
+//                    int msg = 0;
+//
+//                    UserDao userDao = new UserDao();
+//
+//                    User uu = userDao.findUser(user.getUsername());
+//
+//                    if(uu != null){
+//                        msg = 1;
+//                    }
+//
+//                    boolean flag = userDao.register(user);
+//                    if(flag){
+//                        msg = 2;
+//                    }
+//                    hand.sendEmptyMessage(msg);
+//
+//                }
+//            }.start();
+//
+//
+//        }
+//        final Handler hand = new Handler()
+//        {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                if(msg.what == 0)
+//                {
+//                    Toast.makeText(getApplicationContext(),"註冊失敗",Toast.LENGTH_LONG).show();
+//
+//                }
+//                if(msg.what == 1)
+//                {
+//                    Toast.makeText(getApplicationContext(),"該賬號已經存在，請換一個賬號",Toast.LENGTH_LONG).show();
+//
+//                }
+//                if(msg.what == 2)
+//                {
+//                    //startActivity(new Intent(getApplication(),MainActivity.class));
+//
+//                    Intent intent = new Intent();
+//                    //將想要傳遞的資料用putExtra封裝在intent中
+//                    intent.putExtra("a","註冊");
+//                    setResult(RESULT_CANCELED,intent);
+//                    finish();
+//                }
+//
+//            }
+//        };
 }
